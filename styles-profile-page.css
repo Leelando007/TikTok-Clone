@@ -1,0 +1,140 @@
+/* Allgemeine Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #111; /* Dunkler Hintergrund */
+    color: #fff; /* Heller Text */
+}
+
+/* Profil-Header */
+.profile-header {
+    background-color: #222; /* Dunkler Header */
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff; /* Weißer Rand um das Profilbild */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    cursor: pointer; /* Zeigt an, dass es klickbar ist */
+}
+
+.profile-details h1 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.profile-details p {
+    font-size: 0.9rem;
+    color: #ccc; /* Hellerer Text für Details */
+}
+
+.follow-btn {
+    margin-left: auto;
+    padding: 8px 20px;
+    background-color: #fff;
+    color: #111;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.follow-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Videogalerie */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexible Grid */
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-card {
+    position: relative;
+    border: 2px solid #fff; /* Weiße Linie um das Video */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer; /* Zeigt an, dass die Videos anklickbar sind */
+    transition: background-color 0.3s ease; /* Sanfter Übergang für den Hover-Effekt */
+}
+
+/* Hover-Effekt: Farbänderung der Video-Container */
+.video-card:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Leichte weiße Hintergrundfarbe */
+}
+
+/* Video-Styling */
+.video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modal für das große Profilbild */
+.modal {
+    display: none; /* Standardmäßig ausgeblendet */
+    position: fixed;
+    z-index: 1; /* Stellt sicher, dass das Modal oben ist */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter Hintergrund */
+    overflow: auto; /* Wenn das Bild größer als der Bildschirm ist */
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#modalImage {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Styling für den Hover-Effekt des Schließ-Buttons */
+.close-btn:hover,
+.close-btn:focus {
+    color: #ccc;
+}
